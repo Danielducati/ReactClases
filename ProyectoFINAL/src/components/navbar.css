@@ -1,0 +1,27 @@
+.carrito-desplegable {
+position: absolute;
+top: 60px;
+right: 20px;
+background: rgb(252, 252, 252);
+border: 1px solid #ddd;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+padding: 1rem;
+z-index: 10;
+width: 200px;
+border-radius: 8px;
+}
+
+.carrito-desplegable h3 {
+margin-top: 0;
+}
+
+.carrito-desplegable ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.carrito-desplegable li {
+padding: 0.3rem 0;
+border-bottom: 1px solid #eee;
+}
