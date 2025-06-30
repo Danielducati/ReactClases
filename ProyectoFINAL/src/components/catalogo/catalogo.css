@@ -1,84 +1,29 @@
-/* src/components/Catalogo/catalogo.css */
-
-.catalogo-container {
+/* Grid contenedor del catálogo */
+.catalogo-grid {
 display: grid;
-grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 gap: 2rem;
-padding: 2rem;
+padding: 2rem 0;
 }
 
-.catalogo-item {
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 12px;
-padding: 1rem;
-text-align: center;
-transition: all 0.3s ease;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.catalogo-item:hover {
-transform: scale(1.02);
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.catalogo-imagen {
-width: 100%;
-height: 200px;
-object-fit: cover;
-border-radius: 8px;
-margin-bottom: 1rem;
-}
-
-.catalogo-item h2 {
-font-size: 1.2rem;
-margin: 0.5rem 0;
-}
-
-.catalogo-item p {
-font-size: 0.95rem;
-color: #666;
-}
-
-.precio {
-display: block;
-margin-top: 0.8rem;
-font-weight: bold;
-color: #ff0000;
-font-size: 1.1rem;
-}
-
-/* barra de navegacion */
-.navbar {
-background-color: #ff0000;
-color: rgb(255, 255, 255);
-padding: 1rem 2rem;
+/* Envuelve cada tarjeta para centrarla dentro de la celda */
+.catalogo-grid-item {
 display: flex;
-justify-content: space-between;
-align-items: center;
-font-size: 1.2rem;
-font-weight: bold;
+justify-content: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carrito-icono {
-background-color: white;
-color: #2c7be5;
-padding: 0.3rem 0.8rem;
-border-radius: 999px;
-font-size: 1rem;
+/* Hover sobre toda la tarjeta */
+.catalogo-grid-item:hover {
+transform: scale(1.03);
 }
 
-.boton-carrito {
-margin-top: 10px;
-background-color: #006eff;
-color: white;
-padding: 0.5rem 1rem;
-border: none;
-border-radius: 8px;
-cursor: pointer;
-transition: background 0.2s ease;
+/* Estilo específico para las tarjetas de productos (opcional si quieres más sombra) */
+.catalogo-grid-item .MuiCard-root {
+transition: box-shadow 0.3s ease;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.boton-carrito:hover {
-background-color: #1b5eb4;
+.catalogo-grid-item:hover .MuiCard-root {
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }

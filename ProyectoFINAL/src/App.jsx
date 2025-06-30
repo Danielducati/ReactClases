@@ -1,14 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CarritoProvider } from "./components/CarritoContext";
-import BarraNavegacion from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import CatalogoLista from "./components/catalogo/CatalogoLista";
-import Navbar from "./components/Navbar"; // si el archivo se llama así
-
+import Acerca from "./pages/Acerca";
+import Contacto from "./pages/Contacto";
 
 function App() {
   return (
     <CarritoProvider>
-      <Navbar />
-      <CatalogoLista />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<CatalogoLista />} />
+          <Route path="/acerca" element={<Acerca />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </Router>
     </CarritoProvider>
   );
 }

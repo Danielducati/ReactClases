@@ -25,3 +25,18 @@ margin: 0;
 padding: 0.3rem 0;
 border-bottom: 1px solid #eee;
 }
+
+.nav-link {
+color: white;
+text-decoration: none;
+font-weight: 500;
+transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+color: #ccc;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}

@@ -16,7 +16,18 @@
     const { agregarAlCarrito } = useContext(CarritoContext);
 
     return (
-        <Card sx={{ maxWidth: 250, m: 2, boxShadow: 3 }}>
+        <Card
+            className="catalogo-card"
+            sx={{
+                width: 280,
+                height: 380,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                boxShadow: 3,
+                m: 2,
+            }}
+            >
         <CardMedia
             component="img"
             height="140"
