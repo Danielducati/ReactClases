@@ -18,7 +18,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 transform: scale(1.03);
 }
 
-/* Estilo específico para las tarjetas de productos (opcional si quieres más sombra) */
+/* Estilo específico para las tarjetas de productos */
 .catalogo-grid-item .MuiCard-root {
 transition: box-shadow 0.3s ease;
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -27,3 +27,26 @@ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 .catalogo-grid-item:hover .MuiCard-root {
 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
+
+/* --------------------------------------------------------------------- */
+/* Estilo especial para Miquito Agogo */
+.miquito-agogo .catalogo-card {
+    width: 340px !important;
+    height: 520px !important;
+    transform: scale(1.05);
+    border: 3px solid gold;
+    background: linear-gradient(135deg, #fff4e6, #ffe6f7);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .miquito-agogo:hover .catalogo-card {
+    transform: scale(1.08);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    }
+
+    .miquito-agogo img {
+    height: 220px !important;
+    object-fit: contain;
+    }
+

@@ -1,8 +1,4 @@
 ## Instalación del proyecto
-
-### 1. Clona el repositorio
-
-```bash
 git clone https://github.com/tuusuario/tu-repo.git
 cd tu-repo
 

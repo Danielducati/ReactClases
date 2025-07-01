@@ -86,6 +86,7 @@ function Navbar() {
                     >
                       -
                     </Button>
+                    {/* Sumar */}
                     <Button
                       size="small"
                       variant="contained"

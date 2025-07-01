@@ -59,6 +59,13 @@ const productos = [
     precio: 190000,
     imagen: "/img/sudadera_hellstar.png",
 },
+{
+    id: 9,
+    nombre: "Miquito agogo",
+    descripcion: "Miquito bien agogo se va con la coach, encime lo que quiera No le duele nada $$$",
+    precio: 19900000,
+    imagen: "/img/miquito.png",
+},
 ];
 
 function CatalogoLista() {
@@ -69,7 +76,10 @@ return (
     </Typography>
     <div className="catalogo-grid">
         {productos.map((prod) => (
-        <div className="catalogo-grid-item" key={prod.id}>
+        <div
+        className={`catalogo-grid-item ${prod.id === 9 ? "miquito-agogo" : ""}`}
+        key={prod.id}
+        >
             <CatalogoItem producto={prod} />
         </div>
         ))}
