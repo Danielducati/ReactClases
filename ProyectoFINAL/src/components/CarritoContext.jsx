@@ -5,6 +5,13 @@ export const CarritoContext = createContext();
 export function CarritoProvider({ children }) {
 const [carrito, setCarrito] = useState([]);
 
+
+const eliminarProducto = (producto) => {
+    setCarrito((prev) => prev.filter((p) => p.id !== producto.id));
+};
+
+
+
 const agregarAlCarrito = (producto) => {
     setCarrito((prev) => [...prev, producto]);
 };
@@ -19,13 +26,13 @@ const quitarUno = (producto) => {
 };
 
 const pagar = () => {
-    if (carrito.length === 0) return alert("No tienes productos en el carrito.");
+    if (carrito.length === 0) return alert("No tienes productos en el carrito");
     alert("¡Gracias por tu compra!");
     setCarrito([]);
 };
 
 return (
-    <CarritoContext.Provider value={{ carrito, agregarAlCarrito, quitarUno, pagar }}>
+    <CarritoContext.Provider value={{ carrito, agregarAlCarrito, quitarUno, pagar, eliminarProducto}}>
     {children}
     </CarritoContext.Provider>
 );

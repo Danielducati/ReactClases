@@ -1,4 +1,4 @@
-.carrito-desplegable {
+/* .carrito-desplegable {
 position: absolute;
 top: 60px;
 right: 20px;
@@ -27,16 +27,31 @@ border-bottom: 1px solid #eee;
 }
 
 .nav-link {
-color: white;
-text-decoration: none;
-font-weight: 500;
-transition: color 0.2s ease;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-color: #ccc;
+  color: #ccc;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
+.MuiAppBar-root {
+  background: linear-gradient(90deg, #0051ff, #ff0000, #2c5364);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
+.navbar-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-right: 185px;
+}
+
+
+.navbar {
+  background-color: red !important;
+} */

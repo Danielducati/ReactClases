@@ -20,7 +20,7 @@ const productos = [
 {
     id: 3,
     nombre: "Conjunto supreme",
-    descripcion: "Supreme mi boru nada q decir",
+    descripcion: "Supreme mi brou nada q decir",
     precio: 5400000,
     imagen: "/img/conjunto_supreme.jpeg",
 },
@@ -71,9 +71,7 @@ const productos = [
 function CatalogoLista() {
 return (
     <Container sx={{ mt: 4 }}>
-    <Typography variant="h4" gutterBottom align="center">
-        Catálogo de Productos
-    </Typography>
+    <h2 className="catalogo-titulo">Catálogo de Productos</h2>
     <div className="catalogo-grid">
         {productos.map((prod) => (
         <div

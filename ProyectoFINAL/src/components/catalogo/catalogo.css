@@ -50,3 +50,82 @@ box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     object-fit: contain;
     }
 
+
+.catalogo-card {
+background-color: #ffffff;
+border-radius: 12px;
+overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalogo-card:hover {
+transform: scale(1.02);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.catalogo-card .MuiCardMedia-root {
+object-fit: cover;
+border-bottom: 1px solid #eee;
+}
+
+.catalogo-card .MuiTypography-h6 {
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+}
+
+.catalogo-card .MuiTypography-body2 {
+font-size: 0.95rem;
+color: #444;
+}
+
+/* COLOR DEL PRECIOOOOOOOOOOOOOOO */
+.catalogo-card .MuiTypography-subtitle1 {
+color: #000000;
+font-weight: bold;
+font-size: 1.1rem;
+}
+
+/* -----------ESTILO PARA EL CARRITOOOOOOOOOOOOOO */
+.carrito-box {
+background: #f5f5f5;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.carrito-total {
+font-weight: bold;
+font-size: 1.2rem;
+color: #2c3e50;
+}
+
+
+/* Paginas aceca de y contacto */
+
+.page-container {
+font-family: 'Poppins', sans-serif;
+color: #333;
+}
+
+.page-container h4 {
+font-size: 2rem;
+font-weight: 600;
+margin-bottom: 1rem;
+}
+
+.page-container p {
+font-size: 1.1rem;
+line-height: 1.6;
+}
+
+/* Titulo "Catalogo de productos" */
+.catalogo-titulo {
+font-family: 'Poppins', sans-serif;
+font-size: 2.5rem;
+font-weight: 700;
+text-align: center;
+color: #ffffff;
+text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+margin-bottom: 2rem;
+}

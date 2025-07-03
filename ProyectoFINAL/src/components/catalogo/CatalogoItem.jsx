@@ -49,11 +49,17 @@
             <Button
             size="small"
             variant="contained"
-            color="primary"
             onClick={() => agregarAlCarrito(producto)}
             startIcon={<ShoppingCartIcon />}
+            sx={{
+                backgroundColor: "#fbc02d", // Amarillo fuerte
+                color: "#000", // Texto oscuro
+                '&:hover': {
+                backgroundColor: "#f9a825", // Amarillo más oscuro al pasar el mouse
+                }
+            }}
             >
-            Agregar
+            Agregar al carrito
             </Button>
         </CardActions>
         </Card>

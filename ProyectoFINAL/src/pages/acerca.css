@@ -1,0 +1,41 @@
+.galeria {
+display: flex;
+gap: 2rem;
+justify-content: center;
+margin-top: 2rem;
+flex-wrap: wrap;
+}
+
+.galeria-img {
+width: 100%;
+max-width: 400px;
+height: auto;
+border-radius: 12px;
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease;
+}
+
+.galeria-img:hover {
+transform: scale(1.05);
+}
+
+
+.acerca-container {
+color: white;
+text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+padding: 2rem;
+border-radius: 8px;
+background-color: rgba(0, 0, 0, 0.4); /* fondo semi oscuro para resaltar texto */
+}
+
+.acerca-container h4 {
+font-size: 2.2rem;
+font-weight: 700;
+margin-bottom: 1rem;
+}
+
+.acerca-container p {
+font-size: 1.2rem;
+line-height: 1.6;
+margin-bottom: 2rem;
+}
