@@ -17,7 +17,8 @@ return (
         <img src="/img/outfit1.jpeg" alt="Prenda 1" className="galeria-img" />
         <img src="/img/outfit2.jpeg" alt="Prenda 2" className="galeria-img" />
         <img src="/img/outfit3.jpeg" alt="Prenda 3" className="galeria-img" />
-        <img src="/img/outfit4.jpeg" alt="Prenda 3" className="galeria-img" />
+        <img src="/img/outfit4.jpeg" alt="Prenda 4" className="galeria-img" />
+        <img src="/img/aguitaflow.png" alt="Prenda 5" className="galeria-img" />
     </Box>
     </Container>
 );
