@@ -1,0 +1,88 @@
+# 🧢 Dancousin Shop
+
+Catálogo web de ropa con carrito de compras integrado.  
+Proyecto desarrollado en React + Vite, usando Material UI (MUI) y estilos personalizados.
+
+---
+
+## 🛠 Tecnologías utilizadas
+
+- ⚛️ **React + Vite**
+- 🎨 **Material UI (MUI v5)**
+- 💬 **Snackbar para notificaciones**
+- 🛒 **Carrito flotante con cierre automático**
+- 💅 Estilos con `sx` y CSS combinados
+- 🧼 Código limpio y organizado por componentes
+
+---
+
+## 🚀 Instalación del proyecto
+
+1. Clona este repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+```
+
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Inicia el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+4. Abre en tu navegador:
+
+```
+http://localhost:5173/
+```
+
+---
+
+ Dependencias importantes
+
+Si necesitas instalar dependencias manualmente:
+
+```bash
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+```
+
+---
+
+## Subir cambios al repositorio de GitHub
+
+Cada vez que hagas cambios, actualiza tu repositorio con:
+
+```bash
+git add .
+git commit -m  Cambios nuevos"
+git push origin main
+```
+
+Si te da error al hacer push:
+
+```bash
+git pull origin main --rebase
+git push origin main
+```
+
+---
+
+## Cómo desplegar en otro computador
+
+1. Descarga o clona el repo.
+2. Abre en VSCode o terminal.
+3. Ejecuta:
+
+```bash
+npm install
+npm run dev
+```
+
