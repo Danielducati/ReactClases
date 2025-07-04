@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import HomeIcon from "@mui/icons-material/Home";
-
+import ClickAwayListener from "@mui/material/ClickAwayListener"; // ✅ Import correcto para tu caso
 import { Link } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./catalogo/catalogo.css";
@@ -105,82 +105,96 @@ function Navbar() {
 </AppBar>
 
 
-      <Drawer
-        anchor="right"
-        open={mostrarCarrito}
-        onClose={() => setMostrarCarrito(false)}
+        {mostrarCarrito && (
+    <ClickAwayListener onClickAway={() => setMostrarCarrito(false)}>
+      <Box
+        sx={{
+          position: "fixed",
+          top: "70px", // debajo del navbar
+          right: "20px",
+          width: "320px",
+          maxHeight: "75vh",
+          overflowY: "auto",
+          backgroundColor: "white",
+          boxShadow: "0px 4px 20px rgba(0,0,0,0.3)",
+          borderRadius: "12px",
+          zIndex: 1300,
+          padding: 2,
+        }}
       >
-        <Box className="carrito-box" sx={{ width: 300, p: 2 }}>
-          <Typography variant="h6" gutterBottom>
-            Carrito
-          </Typography>
-          <List>
-              {Object.values(resumenCarrito).map((item, i) => (
-                <ListItem key={i} secondaryAction={
-                  <>
-                  {/* Botones para sumar y restar en el carrito mi tio */}
-                  {/* Quitar */}
-                    <Button
-                      size="small"
-                      variant="contained"
-                      color="error"
-                      onClick={() => quitarUno(item)}
-                      sx={{ minWidth: "32px", mx: 0.5 }}
-                    >
-                      -
-                    </Button>
-                    {/* Sumar */}
-                    <Button
-                      size="small"
-                      variant="contained"
-                      color="success"
-                      onClick={() => agregarAlCarrito(item)}
-                      sx={{ minWidth: "32px", mx: 0.5 }}
-                    >
-                      +
-                    </Button>
-                    {/* Eliminar  */}
-                    <Button
-                      size="small"
-                      variant="outlined"
-                      color="error"
-                      onClick={() => eliminarProducto(item)}
-                      sx={{ minWidth: "32px", ml: 1 }}
-                    >
-                      <DeleteIcon fontSize="small" />
+        <Typography variant="h6" gutterBottom>
+          Carrito
+        </Typography>
+
+        <List>
+          {Object.values(resumenCarrito).map((item, i) => (
+            <ListItem
+              key={i}
+              secondaryAction={
+                <>
+                  <Button
+                    size="small"
+                    variant="contained"
+                    color="error"
+                    onClick={() => quitarUno(item)}
+                    sx={{ minWidth: "32px", mx: 0.5 }}
+                  >
+                    -
                   </Button>
-                  </>
-                }>
-                  <ListItemAvatar>
-                    <Avatar
-                      alt={item.nombre}
-                      src={item.imagen}
-                      sx={{ width: 56, height: 56 }}
-                    />
-                  </ListItemAvatar>
-                  <ListItemText
-                    // primary={item.nombre}  //Para mostrar el nombre mi tio
-                    secondary={`Cantidad: ${item.cantidad}`}
-                  />
-                </ListItem>
-              ))}
-          </List>
-          <Box sx={{ mt: 2, textAlign: "right" }}>
-            <Typography variant="h6">
-              Total: ${total.toLocaleString("es-CO", { minimumFractionDigits: 2 })}
-            </Typography>
-            <Button
-              variant="contained"
-              color="success"
-              fullWidth
-              sx={{ mt: 1 }}
-              onClick={pagar}
+                  <Button
+                    size="small"
+                    variant="contained"
+                    color="success"
+                    onClick={() => agregarAlCarrito(item)}
+                    sx={{ minWidth: "32px", mx: 0.5 }}
+                  >
+                    +
+                  </Button>
+                  <Button
+                    size="small"
+                    variant="outlined"
+                    color="error"
+                    onClick={() => eliminarProducto(item)}
+                    sx={{ minWidth: "32px", ml: 1 }}
+                  >
+                    <DeleteIcon fontSize="small" />
+                  </Button>
+                </>
+              }
             >
-              Pagar
-            </Button>
-          </Box>
+              <ListItemAvatar>
+                <Avatar
+                  alt={item.nombre}
+                  src={item.imagen}
+                  sx={{ width: 56, height: 56 }}
+                />
+              </ListItemAvatar>
+              <ListItemText
+                // primary={item.nombre}
+                secondary={`Cantidad: ${item.cantidad}`}
+              />
+            </ListItem>
+          ))}
+        </List>
+
+        <Box sx={{ mt: 2, textAlign: "right" }}>
+          <Typography variant="h6">
+            Total: ${total.toLocaleString("es-CO", { minimumFractionDigits: 2 })}
+          </Typography>
+          <Button
+            variant="contained"
+            color="success"
+            fullWidth
+            sx={{ mt: 1 }}
+            onClick={pagar}
+          >
+            Pagar
+          </Button>
         </Box>
-      </Drawer>
+      </Box>
+    </ClickAwayListener>
+  )}
+
     </div>
   );
 }
